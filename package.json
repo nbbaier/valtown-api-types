@@ -1,6 +1,6 @@
 {
   "name": "valtown-api-types",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "author": {
     "name": "Nico Baier"
@@ -13,14 +13,15 @@
   "types": "dist/api.d.ts",
   "license": "MIT",
   "scripts": {
-    "generate-types": "node src/generator.js ",
-    "build": "tsup src/api.ts  --format esm --dts"
+    "generate-types": "node generator.js ",
+    "build": "tsup api.ts  --format esm --dts"
   },
   "dependencies": {
     "node-fetch": "^3.3.2",
     "yaml": "^2.3.1"
   },
   "devDependencies": {
+    "tsup": "^7.1.0",
     "typescript": "^5.1.6"
   },
   "files": [
