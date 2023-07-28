@@ -7,4 +7,4 @@ const yamlString = await fetch("https://www.val.town/docs/openapi.yaml").then(
 );
 const jsonString = JSON.stringify(yaml.parse(yamlString));
 
-fs.writeFileSync("./api.ts", `export const api = ${jsonString} as const`);
+fs.writeFileSync("./src/api.ts", `export const api = ${jsonString} as const`);
