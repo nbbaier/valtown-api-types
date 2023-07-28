@@ -1,7 +1,6 @@
 {
   "name": "valtown-api-types",
   "version": "0.0.1",
-  "description": "",
   "type": "module",
   "author": {
     "name": "Nico Baier"
