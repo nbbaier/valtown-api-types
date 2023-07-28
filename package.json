@@ -3,10 +3,26 @@
   "version": "0.0.1",
   "description": "",
   "type": "module",
-  "author": "Nico Baier",
-  "license": "ISC",
+  "author": {
+    "name": "Nico Baier"
+  },
+  "main": "dist/api.js",
+  "types": "dist/api.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "generate-types": "node src/generator.js && tsc",
+    "build": "tsc"
+  },
   "dependencies": {
     "node-fetch": "^3.3.2",
     "yaml": "^2.3.1"
-  }
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ]
 }
