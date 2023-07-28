@@ -6,6 +6,10 @@
   "author": {
     "name": "Nico Baier"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nbbaier/valtown-api-types"
+  },
   "main": "dist/api.js",
   "types": "dist/api.d.ts",
   "license": "MIT",
