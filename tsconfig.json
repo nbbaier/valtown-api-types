@@ -1,6 +1,6 @@
 {
     "files": [
-        "src/api.ts"
+        "api.ts"
     ],
     "compilerOptions": {
         "target": "ESNext",
