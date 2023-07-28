@@ -1,6 +1,6 @@
 {
   "name": "valtown-api-types",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "author": {
     "name": "Nico Baier"
@@ -9,12 +9,12 @@
     "type": "git",
     "url": "https://github.com/nbbaier/valtown-api-types"
   },
-  "main": "dist/api.js",
-  "types": "dist/api.d.ts",
+  "main": "./dist/api.js",
+  "types": "./dist/api.d.ts",
   "license": "MIT",
   "scripts": {
-    "generate-types": "node generator.js ",
-    "build": "tsup api.ts  --format esm --dts"
+    "generate-types": "node generator.js && npm run build",
+    "build": "tsup "
   },
   "dependencies": {
     "node-fetch": "^3.3.2",
@@ -28,5 +28,8 @@
     "dist/*",
     "README.md",
     "package.json"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
