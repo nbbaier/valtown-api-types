@@ -6,7 +6,7 @@ This package is intended for use with a [`fets`](https://github.com/ardatan/feTS
 
 ```ts
 import { NormalizeOAS, createClient } from "fets";
-import { api } from "valtown-api-types";
+import openapi from "valtown-api-types";
 
 const token = "<YOUR TOKEN>";
 

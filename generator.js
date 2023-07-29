@@ -1,10 +1,16 @@
 import fs from "fs";
 import yaml from "yaml";
-import fetch from "node-fetch";
+// import fetch from "node-fetch";
 
-const yamlString = await fetch("https://www.val.town/docs/openapi.yaml").then(
-  (response) => response.text()
+const response = await fetch("https://www.val.town/docs/openapi.yaml").then(
+  (res) => res.text()
 );
+const spec = yaml.parse(response);
 
-const jsonString = JSON.stringify(yaml.parse(yamlString));
-fs.writeFileSync("./api.ts", `export const api = ${jsonString} as const`);
+const types = `declare const openapi: ${JSON.stringify(
+  spec,
+  null,
+  2
+)}; export default openapi;`.trim();
+
+fs.writeFileSync("./index.d.ts", types);
