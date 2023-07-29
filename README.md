@@ -10,7 +10,7 @@ import openapi from "valtown-api-types";
 
 const token = "<YOUR TOKEN>";
 
-const client = createClient<NormalizeOAS<typeof api>>({
+const client = createClient<NormalizeOAS<typeof openapi>>({
   endpoint: "https://api.val.town",
 });
 
